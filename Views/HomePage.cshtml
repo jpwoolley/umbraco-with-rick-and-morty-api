@@ -1,0 +1,18 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.PublishedContent
+
+@{
+	Layout = "master.cshtml";
+}
+
+<header class="jumbotron">
+	<div>
+		<h1 class="display-4">Homepage</h1>
+		<p class="lead">An Umbraco project utilising the Rick and Morty API, made by Jonathan.</p>
+	</div>
+</header>
+
+<main>
+	@Model.Value("bodyText")
+</main>

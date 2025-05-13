@@ -1,0 +1,18 @@
+{
+    "$schema": "../../umbraco-package-schema.json",
+    "name": "Rick and Morty Dashboard",
+    "version": "0.1.0",
+    "extensions": [
+        {
+            "type": "dashboard",
+            "alias": "Rick.And.Morty.Dashboard.MyExtension",
+            "name": "Rick and Morty Dashboard",
+            "element": "/App_Plugins/rick-and-morty-dashboard/rick-and-morty-dashboard.js",
+            "elementName": "my-element",
+            "meta": {
+                "label": "Rick and Morty Dashboard",
+                "pathname": "rick-and-morty-dashboard"
+            }
+        }
+    ]
+}

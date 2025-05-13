@@ -1,0 +1,61 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    Layout = "master.cshtml";
+}
+
+<header class="jumbotron">
+	<div>
+		<h1 class="display-4">@Model.Value("characterName")</h1>
+	</div>
+</header>
+
+<main class="character-item-container" aria-labelledby="character-name-heading">
+
+    <section>
+        <img class="character-item-image"
+             src="@Model.Value("characterImage")"
+             alt="Image of @Model.Value("characterName")" />
+    </section>
+
+    <section class="character-item-details" aria-label="Character details">
+        <table class="character-item-table">
+            <caption class="visually-hidden">Details about @Model.Value("characterName")</caption>
+            <tbody>
+                <tr>
+                    <td>Status</td>
+                    <td>@Model.Value("characterStatus")</td>
+                </tr>
+                <tr>
+                    <td>Species</td>
+                    <td>@Model.Value("characterSpecies")</td>
+                </tr>
+                <tr>
+                    <td>Type (character subspecies)</td>
+                    <td>@Model.Value("characterType")</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>@Model.Value("characterGender")</td>
+                </tr>
+                <tr>
+                    <td>Origin</td>
+                    <td>@Model.Value("characterOrigin")</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>@Model.Value("characterLocation")</td>
+                </tr>
+                <tr>
+                    <td>Created</td>
+                    <td>@Model.Value("characterCreated")</td>
+                </tr>
+                <tr>
+                    <td>Episode Count</td>
+                    <td>@Model.Value("characterEpisodeCount")</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>

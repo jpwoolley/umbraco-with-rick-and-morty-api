@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWUmbracoProject", "JWUmbracoProject.csproj", "{50499C72-2AD5-4E70-AC7F-9BA734384E23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50499C72-2AD5-4E70-AC7F-9BA734384E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50499C72-2AD5-4E70-AC7F-9BA734384E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50499C72-2AD5-4E70-AC7F-9BA734384E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50499C72-2AD5-4E70-AC7F-9BA734384E23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C562A703-815D-43C4-893E-4E74495A24F8}
+	EndGlobalSection
+EndGlobal

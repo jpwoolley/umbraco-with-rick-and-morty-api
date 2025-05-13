@@ -1,0 +1,58 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	Layout = "master.cshtml";
+}
+
+<header class="jumbotron">
+	<div>
+		<h1 class="display-4">Characters</h1>
+		<p class="lead">This page displays all the characters imported from the Rick and Morty API</p>
+		<p>Click on a row in the table to view more information about that character</p>
+	</div>
+</header>
+
+<main aria-labelledby="characters-heading">
+	<section aria-label="Character list">
+		@{
+			var selection = Umbraco.Content(Guid.Parse("4759ca40-e9a8-4b4c-9475-e272e7f4f6dd"))
+				.ChildrenOfType("characterItem")
+				.Where(x => x.IsVisible())
+				.OrderBy(x => x.Value("characterName"));
+		}
+
+		@if (!selection.Any())
+		{
+			<p role="status" aria-live="polite">
+				Hmm... there aren't any imported characters yet. You can import characters from the Rick and Morty dashboard.
+			</p>
+		}
+		else
+		{
+			<table class="characters-table">
+				<caption>
+					List of imported characters from the Rick and Morty API
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Species</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in selection)
+					{
+						<tr
+							role="link"
+							onclick="location.href='@item.Url()'"
+							onkeypress="if(event.key==='Enter'){ location.href='@item.Url()'; }">
+							<td scope="row">@item.Value("characterName")</td>
+							<td>@item.Value("characterSpecies")</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+	</section>
+</main>
