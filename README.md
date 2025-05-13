@@ -3,6 +3,28 @@ This is an Umbraco 15 project that integrates with the [Rick and Morty API](http
 
 ---
 
+## Setting up the project and using it
+### Cloning and running
+1. Clone the project to your computer.
+2. CD in to the project folder.
+3. Run "dotnet restore".
+4. Run "dotnet run".
+5. When the project has finished building, you can browse to the site. The site address should be https://localhost:44308 as per the launchSettings.json file.
+(Note: if port 44308 isn't working for the site, keep an eye on the ouput for the port which gets assigned instead. You should see a line which resembles "Now listening on: https://localhost:...". Use that port instead)
+
+The project includes a pre-configured database so setup is not neccessary.
+
+### Sign in to Backoffice
+You can use the following details to login to Backoffice:
+
+Username: mail@example.com
+Password: MyOtherPasswordIsMoreSecure1234!
+
+### Characters
+The site will already have a small collection of characters imported which you can view at /characters. You can manage this collection - Import additional characters or delete them - from the Dashboard.
+
+---
+
 ## Custom Developments
 The custom developments in this project make use of the following languages/tools:
 - C#/.NET 8
